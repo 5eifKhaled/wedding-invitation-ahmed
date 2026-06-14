@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>أحمد ونهى — حفل الزفاف</title>
+<meta property="og:title" content="دعوة زفاف أحمد ونهى">
+<meta property="og:description" content="نتشرف بحضوركم حفل زفافنا">
+<meta property="og:image" content="preview.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -199,6 +202,12 @@ body > .page-wrap{padding-top:60px}
   background:#fff;border:1px solid rgba(184,134,42,0.2);border-radius:16px;position:relative;overflow:hidden;
 }
 .cbox::after{content:"";position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold2),transparent)}
+
+.cbox:hover{
+  transform:translateY(-3px);
+  transition:.3s;
+}
+
 .cnum{font-family:"Cormorant Garamond",serif;font-size:2.5rem;font-weight:600;color:var(--brown);display:block;line-height:1}
 .cnum.flip{animation:numflip 0.15s ease}
 @keyframes numflip{from{transform:translateY(-6px);opacity:0}to{transform:translateY(0);opacity:1}}
@@ -244,12 +253,36 @@ footer{background:var(--dark);padding:56px 40px;text-align:center}
 @keyframes fadein{from{opacity:0}to{opacity:1}}
 @keyframes popin{from{transform:scale(0.8);opacity:0}to{transform:scale(1);opacity:1}}
 
+
+.calendar-actions{
+  margin-top:20px;
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+.calendar-btn{
+  text-decoration:none;
+  color:var(--gold);
+  border:1px solid rgba(184,134,42,.35);
+  border-radius:999px;
+  padding:10px 18px;
+  font-family:"Amiri",serif;
+  transition:.3s;
+}
+.calendar-btn:hover{
+  background:var(--gold2);
+  color:#fff;
+  transform:translateY(-2px);
+}
+
 @media(max-width:680px){
   nav{padding:0 16px}
   .nav-links{gap:14px}
   .nav-links a{font-size:0.62rem;letter-spacing:0.15em}
   .side{width:70px;opacity:0.35}
   .hero-body{padding-top:160px}
+  .names-en{letter-spacing:0.05em}
 }
 </style>
 </head>
@@ -261,7 +294,7 @@ footer{background:var(--dark);padding:56px 40px;text-align:center}
     <li class="active"><a href="#hero">الرئيسية</a></li>
     <li><a href="#details">التفاصيل</a></li>
     <li><a href="#countdown">العد التنازلي</a></li>
-    <li><a href="#rsvp">تأكيد الحضور</a></li>
+    <!-- <li><a href="#rsvp">تأكيد الحضور</a></li> -->
   </ul>
 </nav>
 
@@ -335,11 +368,10 @@ footer{background:var(--dark);padding:56px 40px;text-align:center}
 
   <!-- Text content -->
   <div class="hero-body">
-    <p class="verse-top">
-      ومن ايه ان خلق لكم من انفسكم ازواجا<br>
-      لتسكنوا اليها وجعل بينكم موده ورحمه
-    </p>
-
+    <div class="verse-mark">"</div>
+    <p class="verse-body">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا<br>لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً</p>
+    <p class="verse-ref">سورة الروم ـ آية ٢١</p>
+    <br>
     <div class="rule">
       <hr><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1 L9.8 6.2 L15 8 L9.8 9.8 L8 15 L6.2 9.8 L1 8 L6.2 6.2 Z" fill="rgba(184,134,42,0.5)"/></svg><hr class="r">
     </div>
@@ -362,6 +394,8 @@ footer{background:var(--dark);padding:56px 40px;text-align:center}
       <span>الساعة 7:00 مساءً</span>
       <span class="dot"></span>
     </div>
+
+    
   </div>
   <br>
   <!-- Couple PNG (transparent bg) -->
@@ -373,13 +407,22 @@ footer{background:var(--dark);padding:56px 40px;text-align:center}
 
 <!-- DETAILS -->
 <section class="sec" id="details">
-  <p class="eyebrow">تفاصيل الاحتفال</p>
-  <h2 class="sec-h">ليلة لا تُنسى</h2>
+  <!-- <p class="eyebrow">تفاصيل الاحتفال</p> -->
+  <h2 class="sec-h">تفاصيل الاحتفال</h2>
   <div class="cards">
     <div class="card" data-d="0">
       <span class="card-icon">📅</span>
       <div class="card-lbl">التاريخ</div>
       <div class="card-val">الجمعة<br>31 يوليو 2026</div>
+      <div class="calendar-actions">
+      <a class="calendar-btn" target="_blank"
+      href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%D8%AD%D9%81%D9%84+%D8%B2%D9%81%D8%A7%D9%81+%D8%A3%D8%AD%D9%85%D8%AF+%D9%88%D9%86%D9%87%D9%89&dates=20260731T160000Z/20260731T200000Z&location=%D9%82%D8%A7%D8%B9%D8%A9+%D9%84%D9%8A%D9%84%D8%A9+%D8%A7%D9%84%D8%B9%D9%85%D8%B1+%D8%A7%D9%84%D9%85%D8%B1%D9%8A%D9%88%D8%B7%D9%8A%D8%A9">
+            📆 أضف إلى تقويم الهاتف
+      </a>
+      <!-- <a class="calendar-btn" href="wedding.ics" download>
+      📆 أضف إلى تقويم الهاتف
+      </a> -->
+    </div>
     </div>
     <div class="card" data-d="140">
       <span class="card-icon">🕖</span>
@@ -389,8 +432,9 @@ footer{background:var(--dark);padding:56px 40px;text-align:center}
     <div class="card" data-d="280">
       <span class="card-icon">📍</span>
       <div class="card-lbl">المكان</div>
-      <div class="card-val">المريوطية<br>قاعة الأفراح</div>
-      <a href="https://maps.google.com/?q=قصر+النيل+القاهرة" target="_blank" class="map-btn">
+      <div class="card-val">المريوطية<br>قاعة ليلة العمر</div>
+      <br>
+      <a  href="https://maps.google.com/?q=قاعة+ليلة+العمر+المريوطية" target="_blank" class="calendar-btn">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
         الموقع على الخريطة
       </a>
@@ -400,7 +444,7 @@ footer{background:var(--dark);padding:56px 40px;text-align:center}
 
 <!-- COUNTDOWN -->
 <section class="sec sec-alt" id="countdown">
-  <p class="cd-lbl">الوقت المتبقي على ليلة العمر</p>
+  <p class="cd-lbl">الوقت المتبقي</p>
   <div class="cd-grid">
     <div class="cbox"><span class="cnum" id="cd-d">--</span><span class="clbl">يوم</span></div>
     <div class="cbox"><span class="cnum" id="cd-h">--</span><span class="clbl">ساعة</span></div>
@@ -409,15 +453,9 @@ footer{background:var(--dark);padding:56px 40px;text-align:center}
   </div>
 </section>
 
-<!-- VERSE -->
-<section class="sec">
-  <div class="verse-mark">"</div>
-  <p class="verse-body">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا<br>لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً</p>
-  <p class="verse-ref">سورة الروم ـ آية ٢١</p>
-</section>
 
 <!-- RSVP -->
-<section class="sec sec-alt" id="rsvp">
+<!-- <section class="sec sec-alt" id="rsvp">
   <div class="rsvp-wrap">
     <h2 class="rsvp-h">تأكيد الحضور</h2>
     <p class="rsvp-p">يسعدنا تشريفكم الكريم<br>نرجو التأكيد قبل يوم الفرح</p>
@@ -426,12 +464,14 @@ footer{background:var(--dark);padding:56px 40px;text-align:center}
       <button class="btn btn-no" onclick="openModal('no')">أعتذر عن الحضور</button>
     </div>
   </div>
-</section>
+</section> -->
+
 
 <footer>
   <div class="foot-name">Ahmed &amp; Noha</div>
   <div class="foot-rule"><hr><span></span><hr></div>
-  <p class="foot-p">بالهناء والسعادة · 2026</p>
+  <p class="foot-p">2026</p>
+  <p class="foot-p">With Love & Gratitude</p>
 </footer>
 
 </div>
@@ -466,7 +506,10 @@ const TARGET = new Date("2026-07-31T19:00:00");
 let prev = {};
 function tick(){
   const diff = TARGET - new Date();
-  if(diff<=0) return;
+  if(diff<=0){
+    document.querySelector(".cd-grid").innerHTML = "<h3>اليوم هو يوم الزفاف 🎉</h3>";
+    return;
+  }
   const v={d:Math.floor(diff/86400000),h:Math.floor(diff%86400000/3600000),m:Math.floor(diff%3600000/60000),s:Math.floor(diff%60000/1000)};
   ["d","h","m","s"].forEach(k=>{
     const el=document.getElementById("cd-"+k);
