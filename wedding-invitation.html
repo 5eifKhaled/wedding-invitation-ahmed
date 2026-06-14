@@ -500,13 +500,11 @@ function addToCalendar(e){
     if (/iPad|iPhone|iPod/.test(ua)) {
         window.location.href = "wedding.ics";
     }
-    else if (/Android/i.test(ua)) {
+    else {
         window.location.href =
         "https://calendar.google.com/calendar/render?action=TEMPLATE&text=حفل+زفاف+أحمد+ونهى&dates=20260731T160000Z/20260731T200000Z&location=قاعة+ليلة+العمر+المريوطية";
     }
-    else {
-        window.location.href = "wedding.ics";
-    }
+
 }
 </script>
 
